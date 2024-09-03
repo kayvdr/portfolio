@@ -1,0 +1,11 @@
+@import "./colors.css";
+@import "./base.css";
+
+@import "./components/header.css";
+@import "./components/footer.css";
+@import "./components/intro.css";
+@import "./components/about.css";
+@import "./components/skills.css";
+@import "./components/projects.css";
+@import "./components/contact.css";
+@import "aos/dist/aos.css";

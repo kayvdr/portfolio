@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Portfolio</title>
+    <script type="module" src="/src/entry.ts"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="/">ON3K</a>
+      </div>
+      <nav class="nav js-nav">
+        <button class="nav-btn js-nav-btn">
+          <span class="nav-btn-icon"></span>
+        </button>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/#intro" class="nav-link js-nav-link">Intro</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#about" class="nav-link js-nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#skills" class="nav-link js-nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#projects" class="nav-link js-nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="/#contact" class="nav-link js-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="section intro" id="intro">
+        <div class="container intro-container">
+          <div class="intro-content">
+            <p class="intro-title js-title">Hi, I'm ON3K</p>
+            <p class="intro-subtitle">Web Developer</p>
+            <div class="social">
+              <a
+                href="https://www.instagram.com/on3k.dev"
+                class="social-link"
+                target="_blank"
+              >
+                <svg class="icon social-icon">
+                  <use xlink:href="/svg/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+              <a
+                href="https://www.github.com/on3k"
+                class="social-link"
+                target="_blank"
+              >
+                <svg class="icon social-icon">
+                  <use xlink:href="/svg/sprite.svg#github"></use>
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kay-vieider-b8a977276/"
+                class="social-link"
+                target="_blank"
+              >
+                <svg class="icon social-icon">
+                  <use xlink:href="/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="intro-image">
+          <div class="js-intro-animation"></div>
+        </div>
+        <div class="scroll-wrapper">
+          <a href="/#about">
+            <svg class="icon scroll-icon">
+              <use xlink:href="/svg/sprite.svg#arrow-down"></use>
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="about-wrapper">
+            <div class="about-content">
+              <h1 class="about-title">About me</h1>
+              <p class="about-text">
+                I am a passionate web developer from Northern Italy with over 6
+                years of experience. Every day I strive to improve my skills and
+                design innovative web solutions. My journey started several
+                years ago with a focus on stunning user interfaces. With a deep
+                understanding of current technologies and trends, I work to
+                create aesthetically pleasing and functional websites that
+                delight users. My goal is to design effective and user-friendly
+                websites. I look forward to new challenges to further expand my
+                skills in the front-end but also in the back-end and create
+                innovative solutions for an improved digital experience.
+              </p>
+            </div>
+            <div>
+              <div class="about-boxes">
+                <div class="box" data-aos="fade-down">
+                  <div class="box-values">
+                    <p class="box-label">Name</p>
+                    <p class="box-value">Kay</p>
+                  </div>
+                </div>
+                <div class="box" data-aos="fade-left" data-aos-delay="100">
+                  <div class="box-values">
+                    <p class="box-label">Email</p>
+                    <p class="box-value">kayvieider97</p>
+                  </div>
+                </div>
+                <div class="box" data-aos="fade-right" data-aos-delay="200">
+                  <div class="box-values">
+                    <p class="box-label">Born in</p>
+                    <p class="box-value">1997</p>
+                  </div>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="400">
+                  <div class="box-values">
+                    <p class="box-label">From</p>
+                    <p class="box-value">Italy</p>
+                  </div>
+                </div>
+              </div>
+              <div class="about-cv">
+                <a href="/public/pdf/kay-vieider-cv.pdf" class="btn" download>
+                  Download CV
+                  <svg class="icon btn-icon">
+                    <use xlink:href="/svg/sprite.svg#download"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section skills" id="skills">
+        <div class="container">
+          <div class="skills-wrapper">
+            <div class="skills-frontend">
+              <h2 class="skills-title">Frontend</h2>
+              <div class="skills-item">
+                <p class="skills-label">HTML</p>
+                <div class="skills-range">
+                  <span
+                    class="skills-range-active js-skills-range"
+                    style="--width: 95%"
+                  ></span>
+                </div>
+              </div>
+              <div class="skills-item">
+                <p class="skills-label">CSS</p>
+                <div class="skills-range">
+                  <span
+                    class="skills-range-active js-skills-range"
+                    style="--width: 90%"
+                  ></span>
+                </div>
+              </div>
+              <div class="skills-item">
+                <p class="skills-label">JS/TS</p>
+                <div class="skills-range">
+                  <span
+                    class="skills-range-active js-skills-range"
+                    style="--width: 80%"
+                  ></span>
+                </div>
+              </div>
+              <div class="skills-item">
+                <p class="skills-label">React</p>
+                <div class="skills-range">
+                  <span
+                    class="skills-range-active js-skills-range"
+                    style="--width: 60%"
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="skills-backend">
+              <h2 class="skills-title">Backend</h2>
+              <div class="skills-item">
+                <p class="skills-label">PHP/Laravel</p>
+                <div class="skills-range">
+                  <span
+                    class="skills-range-active js-skills-range"
+                    style="--width: 35%"
+                  ></span>
+                </div>
+              </div>
+              <div class="skills-item">
+                <p class="skills-label">Postgres</p>
+                <div class="skills-range">
+                  <span
+                    class="skills-range-active js-skills-range"
+                    style="--width: 25%"
+                  ></span>
+                </div>
+              </div>
+              <div class="skills-item">
+                <p class="skills-label">Go</p>
+                <div class="skills-range">
+                  <span
+                    class="skills-range-active js-skills-range"
+                    style="--width: 50%"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section projects" id="projects">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="js-embla embla">
+            <div class="embla__container project-container">
+              <div class="embla__slide project-slide">
+                <div class="project-box" data-aos="fade-up">
+                  <div class="project-img-container">
+                    <img src="./img/shac.jpg" class="project-img" />
+                  </div>
+                  <div class="project-footer">
+                    <h3 class="project-title">Shac</h3>
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/on3kdev/shac"
+                        class="project-link"
+                      >
+                        <svg class="icon project-link-icon">
+                          <use xlink:href="/svg/sprite.svg#github"></use>
+                        </svg>
+                      </a>
+                      <!-- <a href="" class="project-link">
+                      <svg class="icon project-link-icon">
+                        <use xlink:href="/svg/sprite.svg#new-tab"></use>
+                      </svg>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="project-box" data-aos="fade-up">
+                  <div class="project-img-container">
+                    <img src="./img/lotio.jpg" class="project-img" />
+                  </div>
+                  <div class="project-footer">
+                    <h3 class="project-title">Lotio (unfinished)</h3>
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/on3kdev/lotio"
+                        class="project-link"
+                      >
+                        <svg class="icon project-link-icon">
+                          <use xlink:href="/svg/sprite.svg#github"></use>
+                        </svg>
+                      </a>
+                      <!-- <a href="" class="project-link">
+                      <svg class="icon project-link-icon">
+                        <use xlink:href="/svg/sprite.svg#new-tab"></use>
+                      </svg>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="embla__slide project-slide">
+                <div
+                  class="project-box"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div class="project-img-container">
+                    <img src="./img/smallify.jpg" class="project-img" />
+                  </div>
+                  <div class="project-footer">
+                    <h3 class="project-title">Smallify</h3>
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/on3kdev/smallify"
+                        class="project-link"
+                      >
+                        <svg class="icon project-link-icon">
+                          <use xlink:href="/svg/sprite.svg#github"></use>
+                        </svg>
+                      </a>
+                      <!-- <a href="" class="project-link">
+                      <svg class="icon project-link-icon">
+                        <use xlink:href="/svg/sprite.svg#new-tab"></use>
+                      </svg>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="project-box"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div class="project-img-container">
+                    <img src="./img/post-generator.jpg" class="project-img" />
+                  </div>
+                  <div class="project-footer">
+                    <h3 class="project-title">Post generator</h3>
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/on3kdev/post-generator"
+                        class="project-link"
+                      >
+                        <svg class="icon project-link-icon">
+                          <use xlink:href="/svg/sprite.svg#github"></use>
+                        </svg>
+                      </a>
+                      <!-- <a href="" class="project-link">
+                      <svg class="icon project-link-icon">
+                        <use xlink:href="/svg/sprite.svg#new-tab"></use>
+                      </svg>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="embla__slide project-slide">
+                <div
+                  class="project-box"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="project-img-container">
+                    <img src="./img/lyrica.jpg" class="project-img" />
+                  </div>
+                  <div class="project-footer">
+                    <h3 class="project-title">Lyrica</h3>
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/on3kdev/lyrica"
+                        class="project-link"
+                      >
+                        <svg class="icon project-link-icon">
+                          <use xlink:href="/svg/sprite.svg#github"></use>
+                        </svg>
+                      </a>
+                      <!-- <a href="" class="project-link">
+                      <svg class="icon project-link-icon">
+                        <use xlink:href="/svg/sprite.svg#new-tab"></use>
+                      </svg>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="embla__controls">
+              <button class="embla__btn js-prev-btn">
+                <svg class="icon">
+                  <use xlink:href="/svg/sprite.svg#arrow-back"></use>
+                </svg>
+              </button>
+              <button class="embla__btn js-next-btn">
+                <svg class="icon">
+                  <use xlink:href="/svg/sprite.svg#arrow-forward"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="js-instagram-feed"></div>
+        </div>
+      </section>
+      <section class="section" id="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>
+            For more information, feel free to follow my social media channels
+            or email me.
+          </p>
+          <div class="contact-boxes">
+            <a
+              href="https://www.instagram.com/on3k.dev/"
+              class="box"
+              target="_blank"
+              data-aos="fade-up"
+            >
+              <div class="box-values">
+                <p class="box-label">Instagram</p>
+                <p class="box-value">on3k.dev</p>
+              </div>
+              <svg class="icon box-icon">
+                <use xlink:href="/svg/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kay-vieider-b8a977276"
+              class="box"
+              target="_blank"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="box-values">
+                <p class="box-label">LinkedIn</p>
+                <p class="box-value">Kay Vieider</p>
+              </div>
+              <svg class="icon box-icon">
+                <use xlink:href="/svg/sprite.svg#linkedin"></use>
+              </svg>
+            </a>
+            <a
+              href="https://github.com/on3kdev"
+              class="box"
+              target="_blank"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="box-values">
+                <p class="box-label">Github</p>
+                <p class="box-value">on3kdev</p>
+              </div>
+              <svg class="icon box-icon">
+                <use xlink:href="/svg/sprite.svg#github"></use>
+              </svg>
+            </a>
+            <a
+              href="mailto:kayvieider97@gmail.com"
+              class="box"
+              target="_blank"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="box-values">
+                <p class="box-label">E-Mail</p>
+                <p class="box-value">kayvieider97</p>
+              </div>
+              <svg class="icon box-icon">
+                <use xlink:href="/svg/sprite.svg#mail"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>&copy; Copyright 2023 | ON3K property</p>
+    </footer>
+  </body>
+</html>

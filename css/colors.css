@@ -1,0 +1,8 @@
+:root {
+  --ci-white: hsl(0, 0%, 100%);
+  --ci-grey: hsl(0, 0%, 58%);
+  --ci-light-grey: hsl(0, 0%, 20%);
+  --ci-dark-grey: hsl(0, 0%, 12%);
+  --ci-green: hsl(165, 100%, 39%);
+  --ci-dark-green: hsl(165, 100%, 29%);
+}

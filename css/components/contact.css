@@ -1,0 +1,19 @@
+.contact-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+@media (min-width: 768px) {
+  .contact-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-boxes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,125 @@
+.intro {
+  min-height: calc(100vh - 5em);
+}
+
+.intro-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-content {
+  padding-top: 6vh;
+  padding-bottom: 12vh;
+}
+
+.intro-title {
+  font-size: 4em;
+  margin: 0;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .intro-title {
+    font-size: 7em;
+  }
+}
+
+.cursor-offset {
+  margin-left: 0.1em !important;
+}
+
+.Typewriter__cursor {
+  color: var(--ci-green);
+  height: 8em;
+}
+
+.intro-subtitle {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--ci-grey);
+}
+
+@media (min-width: 768px) {
+  .intro-subtitle {
+    font-size: 2.5em;
+  }
+}
+
+.social {
+  margin-top: 2em;
+  display: flex;
+  gap: 2em;
+}
+
+@media (min-width: 768px) {
+  .social {
+    gap: 2.5em;
+  }
+}
+
+.social-link {
+  fill: var(--ci-green);
+  font-size: 1.75em;
+  transition: fill 0.5s;
+}
+
+@media (min-width: 768px) {
+  .social-link {
+    font-size: 2em;
+  }
+}
+
+.social-link:hover {
+  fill: var(--ci-dark-green);
+}
+
+.scroll-wrapper {
+  position: absolute;
+  width: 2em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 2em 0;
+  margin: 0 auto;
+}
+
+.scroll-icon {
+  fill: white;
+  font-size: 1.5em;
+  position: relative;
+  animation: jump 2s infinite;
+}
+
+@keyframes jump {
+  0% {
+    top: 0.1em;
+  }
+  50% {
+    top: 0.5em;
+  }
+  100% {
+    top: 0.1em;
+  }
+}
+
+.intro-image {
+  display: none;
+  position: absolute;
+  top: 110px;
+  right: 0;
+  cursor: move;
+}
+
+@media (min-width: 1500px) {
+  .intro-image {
+    display: block;
+  }
+}
+
+.intro-animation {
+  width: 100%;
+  height: 100%;
+}
