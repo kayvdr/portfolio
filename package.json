@@ -12,14 +12,14 @@
   "license": "ISC",
   "devDependencies": {
     "@types/aos": "^3.0.7",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0"
+    "typescript": "^5.5.4",
+    "vite": "^4.5.3"
   },
   "dependencies": {
-    "@fontsource/anton": "^5.0.17",
+    "@fontsource/anton": "^5.0.21",
     "@types/three": "^0.159.0",
     "aos": "^3.0.0-beta.6",
-    "embla-carousel": "^8.0.0-rc12",
+    "embla-carousel": "^8.2.1",
     "three": "^0.159.0",
     "three-orbitcontrols-ts": "^0.1.2",
     "typed.js": "^2.1.0",

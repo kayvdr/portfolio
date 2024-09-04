@@ -43,7 +43,8 @@ const getImages = async () => {
 };
 
 export const initInstagramFeed = async (isAllowed: boolean) => {
-  const instaFeedEl = document.querySelector<HTMLDivElement>(".js-insta-feed");
+  const instaFeedEl =
+    document.querySelector<HTMLDivElement>(".js-instagram-feed");
   if (!instaFeedEl) return;
 
   if (!isAllowed) {

@@ -9,7 +9,7 @@
 }
 
 .intro-content {
-  padding-top: 6vh;
+  padding-top: 12vh;
   padding-bottom: 12vh;
 }
 
@@ -59,19 +59,19 @@
   }
 }
 
-.social-link {
+.social-icon {
   fill: var(--ci-green);
   font-size: 1.75em;
   transition: fill 0.5s;
 }
 
 @media (min-width: 768px) {
-  .social-link {
+  .social-icon {
     font-size: 2em;
   }
 }
 
-.social-link:hover {
+.social-link:hover .social-icon {
   fill: var(--ci-dark-green);
 }
 
