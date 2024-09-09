@@ -1,5 +1,5 @@
 .intro {
-  min-height: calc(100vh - 5em);
+  min-height: 100vh;
 }
 
 .intro-container {
@@ -84,6 +84,7 @@
   text-align: center;
   padding: 2em 0;
   margin: 0 auto;
+  z-index: 5;
 }
 
 .scroll-icon {
