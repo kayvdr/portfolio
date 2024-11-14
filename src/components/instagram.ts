@@ -76,9 +76,11 @@ export const initInstagramFeed = async (isAllowed: boolean) => {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="play-icon"><path d=" M23.41 11.1 1.51.14a1 1 0 0 0-1.45.89v21.91a1 1 0 0 0 1.44.9l21.91-10.96a1 1 0 0 0 0-1.78zM2.05 21.33V2.64L20.75 12l-18.7 9.34z"/></svg>
               `
           }
-          <div class="gallery-overlay">${
-            img.caption ? `<p>${img.caption}</p>` : ""
-          }</div>
+          ${
+            img.caption
+              ? `<div class="gallery-overlay">${img.caption}</div>`
+              : ""
+          }
         </a>
       `
   );

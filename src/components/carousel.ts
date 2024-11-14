@@ -1,31 +1,65 @@
 import EmblaCarousel, { EmblaCarouselType } from "embla-carousel";
 
-const handleButtons = (carousel: EmblaCarouselType | null) => {
-  const leftArrowElement = document?.querySelector(".js-prev-btn");
-  const rightArrowElement = document?.querySelector(".js-next-btn");
+const addTogglePrevNextBtnsActive = (
+  emblaApi: EmblaCarouselType,
+  prevBtn: HTMLElement,
+  nextBtn: HTMLElement
+) => {
+  const togglePrevNextBtnsState = () => {
+    emblaApi.canScrollPrev()
+      ? prevBtn.removeAttribute("disabled")
+      : prevBtn.setAttribute("disabled", "disabled");
 
-  leftArrowElement?.addEventListener("click", () => carousel?.scrollPrev());
-  rightArrowElement?.addEventListener("click", () => carousel?.scrollNext());
+    emblaApi.canScrollNext()
+      ? nextBtn.removeAttribute("disabled")
+      : nextBtn.setAttribute("disabled", "disabled");
+  };
 
-  !carousel?.canScrollPrev()
-    ? leftArrowElement?.classList.add("disabled")
-    : leftArrowElement?.classList.remove("disabled");
+  emblaApi
+    .on("select", togglePrevNextBtnsState)
+    .on("init", togglePrevNextBtnsState)
+    .on("reInit", togglePrevNextBtnsState);
 
-  !carousel?.canScrollNext()
-    ? rightArrowElement?.classList.add("disabled")
-    : rightArrowElement?.classList.remove("disabled");
+  return () => {
+    prevBtn.removeAttribute("disabled");
+    nextBtn.removeAttribute("disabled");
+  };
+};
+
+export const addPrevNextBtnsClickHandlers = (
+  emblaApi: EmblaCarouselType,
+  prevBtn: HTMLElement,
+  nextBtn: HTMLElement
+) => {
+  prevBtn.addEventListener("click", () => emblaApi.scrollPrev(), false);
+  nextBtn.addEventListener("click", () => emblaApi.scrollNext(), false);
+
+  const removeTogglePrevNextBtnsActive = addTogglePrevNextBtnsActive(
+    emblaApi,
+    prevBtn,
+    nextBtn
+  );
+
+  return () => removeTogglePrevNextBtnsActive();
 };
 
 export const initCarousel = () => {
+  const prevBtnNode = document.querySelector<HTMLElement>(".js-prev-btn");
+  const nextBtnNode = document.querySelector<HTMLElement>(".js-next-btn");
   const emblaNode = document.querySelector<HTMLElement>(".js-embla");
 
-  const carousel =
-    emblaNode &&
-    EmblaCarousel(emblaNode, {
-      loop: false,
-      align: "start",
-    });
+  if (!emblaNode || !prevBtnNode || !nextBtnNode) return;
 
-  carousel?.on("init", () => handleButtons(carousel));
-  carousel?.on("select", () => handleButtons(carousel));
+  const emblaApi = EmblaCarousel(emblaNode, {
+    loop: false,
+    align: "start",
+  });
+
+  const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
+    emblaApi,
+    prevBtnNode,
+    nextBtnNode
+  );
+
+  emblaApi.on("destroy", removePrevNextBtnsClickHandlers);
 };

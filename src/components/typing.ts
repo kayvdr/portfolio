@@ -6,27 +6,17 @@ export const initTypingAnimation = () => {
 
   if (!titleEl) return;
 
-  const text = titleEl?.textContent;
+  const text = titleEl.textContent;
 
   const typewriter = new Typewriter(titleEl, {
-    loop: true,
     delay: 75,
   });
 
   typewriter
-    .pauseFor(2500)
-    .callFunction(() => {
-      const el = document.querySelector<HTMLElement>(".Typewriter__cursor");
-      el?.classList.add("cursor-offset");
-    })
-    .typeString(text)
+    .typeString("Hello World")
     .pauseFor(500)
-    .deleteChars(4)
-    .typeString("Kay")
+    .deleteChars(10)
+    .typeString(text?.substring(1))
     .pauseFor(2000)
-    .callFunction(() => {
-      const el = document.querySelector<HTMLElement>(".Typewriter__cursor");
-      el?.classList.remove("cursor-offset");
-    })
     .start();
 };

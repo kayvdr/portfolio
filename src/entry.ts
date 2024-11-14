@@ -1,7 +1,7 @@
 import "@fontsource/anton";
 
 import "../css/entry.css";
-import { initAnimations, initIntroAnimation } from "./components/animations";
+import { initAnimations } from "./components/animations";
 import { initCarousel } from "./components/carousel";
 import { initInstagramFeed } from "./components/instagram";
 import { initNav } from "./components/nav";
@@ -13,5 +13,4 @@ initCarousel();
 initTypingAnimation();
 initScrollHandling();
 initAnimations();
-initIntroAnimation();
 initInstagramFeed(true);

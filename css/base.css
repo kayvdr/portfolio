@@ -146,7 +146,7 @@ button {
   fill: var(--ci-green);
 }
 
-.embla__btn.disabled {
+.embla__btn:disabled {
   opacity: 0.25;
   pointer-events: none;
 }
