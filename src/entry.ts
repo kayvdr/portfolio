@@ -14,5 +14,3 @@ initTypingAnimation();
 initScrollHandling();
 initAnimations();
 initInstagramFeed(true);
-
-console.log(import.meta.env.VITE_INSTA_ACCESS);
