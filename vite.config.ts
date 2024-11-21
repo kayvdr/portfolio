@@ -1,16 +1,10 @@
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), "");
-  return {
-    build: { sourcemap: true },
-    server: {
-      port: 30001,
-      strictPort: true,
-    },
-    define: {
-      INSTA_ACCESS: JSON.stringify(env.VITE_INSTA_ACCESS || null),
-    },
-  };
+export default defineConfig({
+  build: { sourcemap: true },
+  server: {
+    port: 30001,
+    strictPort: true,
+  },
 });

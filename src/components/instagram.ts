@@ -28,7 +28,7 @@ const getImages = async () => {
     "fields",
     "id,caption,media_type,media_url,thumbnail_url,permalink"
   );
-  params.append("access_token", INSTA_ACCESS);
+  params.append("access_token", import.meta.env.VITE_INSTA_ACCESS);
 
   const response = await fetch(
     `https://graph.instagram.com/me/media?${params.toString()}`

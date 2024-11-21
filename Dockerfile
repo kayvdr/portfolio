@@ -11,6 +11,10 @@ RUN npm ci
 
 COPY . .
 
+# Setze die Umgebungsvariable für den Instagram-Zugangstoken
+ARG VITE_INSTA_ACCESS=IGQWROOXNONmE1RVFDdUlfQUFKb2s1NnJOOWhRcUVMdXYzeGF4Q0JKeEhWVHpQd1lXUlVXOGxrbDBsMEpSdlpxVWFBdmtMbVdmX0hsWkxLSk1hTE5VbkdVUWY2TXk2ZAXpTc1FpTnVjTWJOYllsczAwOXNSV1Jpa0UZD
+ENV VITE_INSTA_ACCESS=${VITE_INSTA_ACCESS}
+
 RUN npm run build
 
 
