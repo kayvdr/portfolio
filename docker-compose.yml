@@ -4,7 +4,6 @@ services:
     ports:
       - "30000:8080"
     environment:
-      - VITE_INSTA_ACCESS=IGQWROOXNONmE1RVFDdUlfQUFKb2s1NnJOOWhRcUVMdXYzeGF4Q0JKeEhWVHpQd1lXUlVXOGxrbDBsMEpSdlpxVWFBdmtMbVdmX0hsWkxLSk1hTE5VbkdVUWY2TXk2ZAXpTc1FpTnVjTWJOYllsczAwOXNSV1Jpa0UZD
       - NGINX_PROTOCOL=
     volumes:
       - ./nginx-config/nginxconfig.io:/etc/nginx/nginxconfig.io
