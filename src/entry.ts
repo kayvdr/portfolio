@@ -13,3 +13,8 @@ initTypingAnimation();
 initScrollHandling();
 initAnimations();
 // initInstagramFeed(true);
+
+console.log(import.meta.env);
+console.log(process.env);
+// @ts-ignore
+console.log(process.env.NEXT_PUBLIC_MY_API_HOST);
