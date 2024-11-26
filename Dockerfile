@@ -11,9 +11,8 @@ RUN npm ci
 
 COPY . .
 
-ENV NEXT_PUBLIC_MY_API_HOST='https://some.host.com'
-
 RUN npm run build
+
 
 FROM nginx:1.20-alpine
 
