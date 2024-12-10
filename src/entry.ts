@@ -12,4 +12,3 @@ initCarousel();
 initTypingAnimation();
 initScrollHandling();
 initAnimations();
-// initInstagramFeed(true);
