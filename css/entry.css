@@ -8,4 +8,5 @@
 @import "./components/skills.css";
 @import "./components/projects.css";
 @import "./components/contact.css";
+@import "vanilla-cookieconsent/dist/cookieconsent.css";
 @import "aos/dist/aos.css";
