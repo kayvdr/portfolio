@@ -38,6 +38,16 @@
   transition: transform 0.5s;
 }
 
+.project-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16/9;
+  padding: 2em;
+  font-size: 1.25em;
+  background-color: var(--ci-light-grey);
+}
+
 .project-box:hover .project-img {
   transform: scale(1.1);
 }
