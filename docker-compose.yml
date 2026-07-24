@@ -3,10 +3,8 @@ services:
     build: .
     ports:
       - "30000:8080"
-    environment:
-      - NGINX_PROTOCOL=
     volumes:
-      - /docker/portfolio/nginx-config/nginxconfig.io:/etc/nginx/nginxconfig.io
-      - /docker/portfolio/nginx-config/templates:/etc/nginx/templates
-      - /docker/portfolio/nginx-config/nginx.conf:/etc/nginx/nginx.conf
-      - /docker/portfolio/dist:/usr/share/nginx/html
+      - ./nginx-config/nginxconfig.io:/etc/nginx/nginxconfig.io
+      - ./nginx-config/templates:/etc/nginx/templates
+      - ./nginx-config/nginx.conf:/etc/nginx/nginx.conf
+      - ./dist:/usr/share/nginx/html
