@@ -1,10 +1,12 @@
 services:
   web:
+    container_name: portfolio-web
     build: .
     ports:
       - "30000:8080"
+    restart: unless-stopped
     volumes:
-      - ./nginx-config/nginxconfig.io:/etc/nginx/nginxconfig.io
-      - ./nginx-config/templates:/etc/nginx/templates
-      - ./nginx-config/nginx.conf:/etc/nginx/nginx.conf
-      - ./dist:/usr/share/nginx/html
+      - ./nginx-config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx-config/nginxconfig.io:/etc/nginx/nginxconfig.io:ro
+      - ./nginx-config/templates:/etc/nginx/templates:ro
+      - ./dist:/usr/share/nginx/html:ro
