@@ -10,3 +10,4 @@ services:
       - ./nginx-config/templates:/etc/nginx/templates
       - ./nginx-config/nginx.conf:/etc/nginx/nginx.conf
       - ./dist:/usr/share/nginx/html
+      - /docker/portfolio/nginx-config/nginx.conf:/etc/nginx/nginx.conf
