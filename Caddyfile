@@ -1,0 +1,11 @@
+# Caddy obtains and renews the TLS certificates automatically
+# and redirects HTTP to HTTPS.
+
+kayvdr.com {
+	encode zstd gzip
+	reverse_proxy web:80
+}
+
+www.kayvdr.com {
+	redir https://kayvdr.com{uri} permanent
+}
