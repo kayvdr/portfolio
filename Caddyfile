@@ -2,10 +2,10 @@
 # and redirects HTTP to HTTPS.
 
 kayvdr.com {
-	encode zstd gzip
-	reverse_proxy web:80
+	redir https://www.kayvdr.com{uri} permanent
 }
 
 www.kayvdr.com {
-	redir https://kayvdr.com{uri} permanent
+	encode zstd gzip
+	reverse_proxy web:80
 }
