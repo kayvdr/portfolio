@@ -1,0 +1,38 @@
+name: Deploy
+
+on:
+  push:
+    branches: [release]
+  workflow_dispatch:
+
+# A newer push waits for the running deploy instead of racing it on the VPS.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          # Pinned host key instead of ssh-keyscan, so a spoofed host is rejected.
+          echo "${{ secrets.VPS_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+
+      - name: Pull and rebuild on VPS
+        run: |
+          ssh -i ~/.ssh/id_deploy "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" \
+            "APP_DIR='${{ vars.VPS_APP_DIR }}' bash -s" <<'EOF'
+          set -euo pipefail
+          cd "$APP_DIR"
+          git fetch origin release
+          # reset instead of pull: the VPS checkout must never diverge from the branch.
+          git reset --hard origin/release
+          # Recreates only containers whose image changed; Caddy keeps running.
+          docker compose up -d --build --remove-orphans
+          docker image prune -f
+          EOF
