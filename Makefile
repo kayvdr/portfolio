@@ -1,12 +1,14 @@
+LOCAL_COMPOSE = docker compose -f docker-compose.yml -f docker-compose.local.yml
+
 docker-up:
-	docker compose up -d --wait
+	$(LOCAL_COMPOSE) up -d --build --wait web
 
 docker-down:
-	docker compose down -v
+	$(LOCAL_COMPOSE) down
 
 docker-reset: docker-down docker-up
 
-dev: docker-up 
+dev: docker-up
 	npm start
 
 deploy:

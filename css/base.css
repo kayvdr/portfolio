@@ -11,7 +11,8 @@ html {
 body {
   margin: 0;
   font-family: "Anton", sans-serif;
-  background-color: var(--ci-dark-grey);
+  /* background-color: var(--ci-dark-grey); */
+  background-color: green;
   color: var(--ci-grey);
   font-size: 1.25em;
 }
